@@ -14,10 +14,11 @@ func NewRouter() *gin.Engine {
 
 	v1Group := r.Group("/api/v1")
 	{
-		v1Group.GET("/article/list", v1.ListArticle)
-		v1Group.POST("/article/create", v1.CreateArticle)
-		v1Group.PUT("/article/update", v1.UpdateArticle)
-		v1Group.DELETE("/article/delete", v1.DeleteArticle)
+		v1Group.GET("/article/:id", v1.GetArticle)
+		v1Group.GET("/articles", v1.ListArticle)
+		v1Group.POST("/article", v1.CreateArticle)
+		v1Group.PUT("/article/:id", v1.UpdateArticle)
+		v1Group.DELETE("/article/:id", v1.DeleteArticle)
 	}
 	return r
 }
