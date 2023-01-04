@@ -6,7 +6,7 @@ just use golang impl some CURD example
 
 本内容实现一个类似 medium 的内容创作平台，提供给注册用户发表文章的能力
 
-- [ ] 使用 gorm 实现 CURD
+- [x] 使用 gorm 实现 CURD
 - [ ] 使用 gorm/gen 实现 CURD
 - [ ] 实现接口级别缓存
 - [ ] 操作 redis 基本数据结构
