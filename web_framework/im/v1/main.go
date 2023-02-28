@@ -4,6 +4,7 @@ import (
 	"context"
 	"flag"
 
+	"v1/client"
 	"v1/server"
 
 	"github.com/sirupsen/logrus"
@@ -23,6 +24,7 @@ func main() {
 	ctx := context.Background()
 
 	root.AddCommand(server.NewServerStartCmd(ctx, version))
+	root.AddCommand(client.NewCmd(ctx))
 
 	if err := root.Execute(); err != nil {
 		logrus.WithError(err).Fatal("Could not run command")
